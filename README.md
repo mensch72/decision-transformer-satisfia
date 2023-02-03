@@ -1,3 +1,10 @@
+# Decision-Transformer-based Satisficing Intelligent Agent
+
+A version of Decision Transformer (see below) modified to satisfice, including Expectation Updating along the trajectory.
+
+Original code contributors: see below.
+
+Modifications: Jobst Heitzig
 
 # Decision Transformer
 

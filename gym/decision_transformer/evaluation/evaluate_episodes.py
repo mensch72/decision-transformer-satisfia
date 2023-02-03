@@ -121,10 +121,13 @@ def evaluate_episode_rtg(
         states = torch.cat([states, cur_state], dim=0)
         rewards[-1] = reward
 
+        #{ TODO: introduce Expectation Updating here:
         if mode != 'delayed':
             pred_return = target_return[0,-1] - (reward/scale)
         else:
             pred_return = target_return[0,-1]
+        #}
+
         target_return = torch.cat(
             [target_return, pred_return.reshape(1, 1)], dim=1)
         timesteps = torch.cat(
